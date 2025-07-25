@@ -1,0 +1,1 @@
+ALTER TABLE "profiles" ADD COLUMN "profile_photo" text DEFAULT 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRekN47BYw7zsiAl6i45IHvsoWETLtFoRUKkg&s' NOT NULL;
