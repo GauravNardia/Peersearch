@@ -2,12 +2,8 @@ import BuilderCard from "@/components/cards/BuilderCard";
 import { searchProfiles } from "@/lib/actions/data";
 import { extractKeywords } from "@/lib/utils";
 
-export default async function SearchPage({
-  searchParams,
-}: {
-  searchParams: { query?: string };
-}) {
-  const rawQuery = (await searchParams).query?.toLowerCase() ?? "";
+export default async function SearchPage({searchParams }: { searchParams: Promise<any> }) {
+  const rawQuery = (await searchParams).query.toLowerCase() ?? "";
   const keywords = extractKeywords(rawQuery);
   const results = await searchProfiles(keywords);
 
